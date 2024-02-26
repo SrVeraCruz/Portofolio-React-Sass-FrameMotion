@@ -1,0 +1,108 @@
+@import "../../app.scss";
+
+.contact {
+  height: 100%;
+  max-width: 70rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+
+  @include mobile {
+    width: 100%;
+    padding: 0.9rem;
+    flex-direction: column;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include mobile {
+      gap: 1rem;
+      margin-top: 4rem;
+      text-align: center;
+      align-items: center;
+    }
+
+    >h1 {
+      font-size: 5rem;
+      line-height: 4.5rem;
+
+      @include mobile {
+        font-size: 2.3rem;
+      }
+    }
+    
+    .item {
+      span {
+        font-weight: 300;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+
+    @include mobile {
+      width: 80%;
+    }
+
+    .phoneSvg {
+      position: absolute;
+      stroke: orange;
+      stroke-width: 0.2;
+      fill: none;
+      margin: auto;
+      z-index: -1;
+
+      @include mobile {
+        width: 100%;
+        height: 100%;
+      }
+      
+      svg {
+        @include mobile {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      input, textarea {
+        padding: .8rem;
+        background: transparent;
+        border: .1rem solid gray;
+        color: white;
+        border-radius: .3rem;
+
+        @include mobile {
+          padding: .6rem;
+        }
+      }
+
+      button {
+        padding: .8rem;
+        border: none;
+        background-color: orange;
+        font-weight: 500;
+        border-radius: .3rem;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+
+        &:hover {
+          background-color: rgb(255, 200, 2);
+        }
+      }
+    }
+  }
+}
